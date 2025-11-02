@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Diagnosis Support System</title>
+    <style>
+        body { font-family: Arial; background-color: #f0f8ff; text-align: center; padding: 20px; }
+        form { background: white; padding: 20px; display: inline-block; border-radius: 10px; }
+        input { margin: 8px; padding: 8px; width: 80%; }
+        button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; }
+        h2 { color: #0077b6; }
+    </style>
+</head>
+<body>
+    <h2>🩺 Medical Diagnosis Support System</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="Pregnancies" placeholder="Pregnancies"><br>
+        <input type="text" name="Glucose" placeholder="Glucose"><br>
+        <input type="text" name="BloodPressure" placeholder="Blood Pressure"><br>
+        <input type="text" name="SkinThickness" placeholder="Skin Thickness"><br>
+        <input type="text" name="Insulin" placeholder="Insulin"><br>
+        <input type="text" name="BMI" placeholder="BMI"><br>
+        <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function"><br>
+        <input type="text" name="Age" placeholder="Age"><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
